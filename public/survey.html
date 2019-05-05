@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Questionnaire</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa fa-user-friends"></span> Friend Finder Questionnaire</h1>
+      <hr>
+      <h3 class="text-center">Please answer how strongly you agree or disagree to find your best match</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Survey Form -->
+        <div class="card">
+          <div class="card-header">
+            About You
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="reserve-name">Name (required)</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <!-- <div class="file-upload-wrapper">
+                <input type="file" id="input-file-now-custom-1" class="file-upload" data-height="200"
+                  data-default-file="https://mdbootstrap.com/img/Photos/Others/images/89.jpg" />
+              </div> -->
+              <div class="form-group">
+                <label for="photo">Link to Photo (required)</label>
+                <input type="text" class="form-control" id="photo" required>
+              </div>
+
+
+              <!-- from work session with Kate -->
+
+
+
+              <label class="statement">#1 - When you are done with your work, you look for more to do</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q1" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q1" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q1" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q1" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q1" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+
+
+              <!-- <select id="q1">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select> -->
+
+
+              <label class="statement">#2 - You say whatever is on your mind</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q2" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q2" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q2" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q2" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q2" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#3 - You would rather work on a team than by yourself</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q3" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q3" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q3" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q3" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q3" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#4 - You like to take frequent breaks when working on something
+                difficult</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q4" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q4" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q4" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q4" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q4" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#5 - You keep calm when under stress</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q5" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q5" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q5" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q5" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q5" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#6 - You like to be alone</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q6" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q6" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q6" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+              <label class="statement">#7 - You hate to give up if you can't solve a hard problem</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q7" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q7" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q7" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q7" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q7" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#8 - You don't worry about making a good impression</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q8" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q8" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q8" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q8" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q8" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#9 - You finish your work no matter what</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q9" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q9" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q9" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q9" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q9" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <label class="statement">#10 - You don't care what people think of you</label>
+              <div class="card-body" id="options">
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q10" id="inlineRadio1" value="1"> 1
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q10" id="inlineRadio2" value="2"> 2
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q10" id="inlineRadio3" value="3"> 3
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q10" id="inlineRadio4" value="4"> 4
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="q10" id="inlineRadio5" value="5"> 5
+                  </label>
+                </div>
+              </div>
+
+              <!-- <a href="/match">
+                <button class="btn btn-lg btn-primary">
+                  <span class="fa fa-user-friends"></span> See Friend Match</button>
+              </a> -->
+        
+              <!-- <button type="submit" class="btn btn-primary submit">Submit</button> -->
+              <!-- <div class="text-left" >
+                  <a href="/">
+                  <button type="button" class="btn btn-lg btn-default">
+                      <span class="fa fa-home"></span>Return Home
+                  </button>
+              </div> -->
+  
+              <div class="text-right" >
+                <button type="button" class="btn btn-secondary btn-md submit" id="add-btn"  data-toggle="modal" data-target="#myModal" >See Your Best Match</button>
+            </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+            <div class="text-left">
+                <a href="/">
+                  <button class="btn btn-lg btn-default">
+                    <span class="fa fa-home"></span>Return Home
+                  </button>
+                </a>
+              </div>
+
+          <!-- <a href="/">Return Home</a> -->
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="bestMatch">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="bestMatch">Meet your best match!</h4>
+          </div>
+          <div class="modal-body" id="friend-info">
+            <h5 id="friend-name"></h5>
+            <img id="friend-photo" src="" alt="Meet your new friend!">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/friends)... 
+
+  var allAnswers = [];
+
+  $(".submit").on("click", function (event) {
+    event.preventDefault();
+
+		var newFriend = {
+			name: $("#name").val().trim(),
+			photo: $("#photo").val().trim(),
+
+			answers: function(){
+				for (i=1; i < 11; i++){
+					var answer = $('input[name="q'+i+'"]:checked').val();
+					allAnswers.push(parseInt(answer));
+				}
+				return allAnswers;
+			}
+		};
+
+		console.log(newFriend);
+
+		$.post("/api/friends", newFriend, function(data){
+
+			if (data) {
+				alert("Get ready to make new friends!");
+			}
+			else {
+				alert("Uh-oh! Something went wrong with your survey!");
+			}
+
+			// clears the form on submit
+			$("#name").val("");
+			$("#photo").val("");
+			$('input[type="radio"]').attr('checked', false);
+
+		}).done(function() {
+			// calls friends api
+			$.ajax({
+					url: "/api/friends",
+					method: "GET",
+					datatype: 'json'
+
+			}).done(function(res, err) {
+				if(err) {
+					console.log(err);
+				}
+				// console.log(res);
+				var current = res[res.length-1];
+				// console.log(current);
+				// stores new user's best match and displays to modal
+				var bestMatch = current.bestie;
+				console.log(bestMatch);
+				$("#friend-name").text("Hi " + current.name + ", my name is " + bestMatch.name + "!");
+				$("img#friend-photo").attr("src", bestMatch.photo);
+			});
+
+		}); // ENDS post.done()
+
+	}); // ENDS button onClick()
+</script>
