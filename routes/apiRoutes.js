@@ -9,6 +9,9 @@ var friendData = require("../data/friends.js");
 // ROUTING
 // ===============================================================================
 
+
+//STILL NEED TO WORK ON THIS. AFTER FIRST USER, ADDITIONAL USER SCORES ARE ADDING TO THE FIRST USER INSTEAD OF TO A UNIQUE ARRAY OF SCORES.//
+
 module.exports = function (app) {
 
     // ---- Get a json list of all friends completed survey (and test data) ----
