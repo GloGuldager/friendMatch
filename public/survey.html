@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Friend Finder Questionnaire</title>
+  <title>Friend Matcher Questionnaire</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1 class="text-center">
-        <span class="fa fa-user-friends"></span> Friend Finder Questionnaire</h1>
+        <span class="fa fa-user-friends"></span> Friend Matcher Questionnaire</h1>
       <hr>
       <h3 class="text-center">Please answer how strongly you agree or disagree to find your best match</h3>
     </div>
@@ -416,7 +416,7 @@
 		$.post("/api/friends", newFriend, function(data){
 
 			if (data) {
-				alert("your match is coming right up!")
+			console.log(newFriend);
 			}
 			else {
 				alert("Uh-oh! Something went wrong with your survey!");
