@@ -14,9 +14,7 @@
 </head>
 
 <body>
-
   <div class="container">
-
     <div class="jumbotron">
       <h1 class="text-center">
         <span class="fa fa-user-friends"></span> Friend Finder Questionnaire</h1>
@@ -26,7 +24,9 @@
 
     <div class="row">
       <div class="col-lg-12">
+
         <!-- Survey Form -->
+
         <div class="card">
           <div class="card-header">
             About You
@@ -37,6 +37,7 @@
                 <label for="reserve-name">Name (required)</label>
                 <input type="text" class="form-control" id="name" required>
               </div>
+              <!-- include button to upload pic files if there is time -->
               <!-- <div class="file-upload-wrapper">
                 <input type="file" id="input-file-now-custom-1" class="file-upload" data-height="200"
                   data-default-file="https://mdbootstrap.com/img/Photos/Others/images/89.jpg" />
@@ -46,10 +47,7 @@
                 <input type="text" class="form-control" id="photo" required>
               </div>
 
-
-              <!-- from work session with Kate -->
-
-
+              <!-- questions with radio buttons for survey -->
 
               <label class="statement">#1 - When you are done with your work, you look for more to do</label>
               <div class="card-body" id="options">
@@ -79,17 +77,6 @@
                   </label>
                 </div>
               </div>
-
-
-
-              <!-- <select id="q1">
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-              </select> -->
-
 
               <label class="statement">#2 - You say whatever is on your mind</label>
               <div class="card-body" id="options">
@@ -352,19 +339,7 @@
                 </div>
               </div>
 
-              <!-- <a href="/match">
-                <button class="btn btn-lg btn-primary">
-                  <span class="fa fa-user-friends"></span> See Friend Match</button>
-              </a> -->
-        
-              <!-- <button type="submit" class="btn btn-primary submit">Submit</button> -->
-              <!-- <div class="text-left" >
-                  <a href="/">
-                  <button type="button" class="btn btn-lg btn-default">
-                      <span class="fa fa-home"></span>Return Home
-                  </button>
-              </div> -->
-  
+              <!-- - button to submit results of survey to friend array for comparison and to also display modal of resulting match -->
               <div class="text-right" >
                 <button type="button" class="btn btn-secondary btn-md submit" id="add-btn"  data-toggle="modal" data-target="#myModal" >See Your Best Match</button>
             </div>
@@ -385,8 +360,6 @@
                   </button>
                 </a>
               </div>
-
-          <!-- <a href="/">Return Home</a> -->
     </footer>
 
     <!-- Modal -->
@@ -415,11 +388,8 @@
 
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!-- SEND RESULTS FROM SURVEY FORM TO APIROUTES ON CLICK EVENT - THE SERVER  -->
 <script type="text/javascript">
-  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-  // Our api recognizes the route (/api/friends)... 
 
   var allAnswers = [];
 
@@ -430,6 +400,7 @@
 			name: $("#name").val().trim(),
 			photo: $("#photo").val().trim(),
 
+      //loop to retrieve values from survey questions and push all integers together in answer key
 			answers: function(){
 				for (i=1; i < 11; i++){
 					var answer = $('input[name="q'+i+'"]:checked').val();
@@ -444,7 +415,7 @@
 		$.post("/api/friends", newFriend, function(data){
 
 			if (data) {
-				alert("Get ready to make new friends!");
+				alert("your match is coming right up!")
 			}
 			else {
 				alert("Uh-oh! Something went wrong with your survey!");
@@ -475,8 +446,6 @@
 				$("#friend-name").text("Hi " + current.name + ", my name is " + bestMatch.name + "!");
 				$("img#friend-photo").attr("src", bestMatch.photo);
 			});
-
-		}); // ENDS post.done()
-
-	}); // ENDS button onClick()
+		}); 
+	}); 
 </script>
